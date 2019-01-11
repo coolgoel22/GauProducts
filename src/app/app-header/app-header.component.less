@@ -1,0 +1,135 @@
+.appHeader{
+    padding: 3px;
+    background-color: #a1a5bd;
+    background-color: #338AFF;
+    background-color: #f7a002;
+    height: 50px;
+    text-align: center;
+    box-shadow: 0px 1px 5px #999;
+    &_homeImg{
+        display: inline-block;
+        width: 55px;
+        height: 55px;
+        border-radius: 40px;
+        position: absolute;
+        top: 0px;
+    
+    }
+    &_menu{
+        display: inline-block;
+        width: 18px;
+        height: 10px;
+        color: white;
+        font-size: 25px;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        // &:hover{
+        //     color: #efefef;
+        // }
+        &:active{
+            transform: scale(0.97);
+        }
+    }
+}
+.gauMata{
+    background-image: url(/assets/images/cowcalf.jpg);
+    background-repeat: no-repeat;
+	background-size: 80px;
+	background-position: -7px;
+	float: right;
+    right: 3px;
+}
+.logo{
+    background-image: url(/assets/images/logo.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    left: 10px;
+}
+.title{
+    font-weight: bold;
+	text-align: center;
+    font-size: 1.5em;
+    color: white;
+    font-family: monospace;
+    display: block;
+    margin: 10px 0;
+}
+.rajivDixit{
+    background-image: url(/assets/images/rajivdixit01.png);
+    background-repeat: no-repeat;
+	background-size: 50px;
+    width: 50px;
+    left: 3px;
+}
+
+.fullLogo{
+    &_img{
+        background-image: url(/assets/images/logo.png);
+        background-size: 100%;
+        width: 100vw;
+        height: 100vh;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        background-position: center center;
+    }
+}
+
+.menu{
+    display: inline-block;
+    padding: 0px;
+    margin: 0;
+    background-color: white;
+    border: 2px solid #666;
+    box-shadow: 0px 0px 6px #999;
+    border-radius: 5px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    max-width: 190px;
+    min-width: 170px;
+    text-align: left;
+    z-index: 9;
+    &_items{
+        list-style: none;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 15px;
+        cursor: pointer;
+        &:first-child{
+            border-radius: 5px 5px 0 0;
+        }
+        &:last-child{
+            border-bottom: none;
+            border-radius: 0 0 5px 5px;
+        } 
+        &:nth-child(2n){
+            background-color: #efefef;
+        }
+        .fa{
+            margin-right: 10px;
+        }
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        top: -12px;
+        right: 2px;
+        width: 0;
+        height: 0;
+        border-bottom: 12px solid #666;
+        border-right: 12px solid transparent;
+        border-left: 12px solid transparent;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: 4px;
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid #fff;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+    }
+
+}

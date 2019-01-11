@@ -1,0 +1,66 @@
+.login{
+        padding: 50px;
+        box-sizing: border-box;
+        background-image: url(/assets/images/GauMata01.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        // height: ~'calc(100vh - 56px)';
+        &_title{
+
+        }
+        &Cont{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 75%;
+        }
+        .fieldError{
+                display: none;
+                margin-top: 15px;
+        }
+        input{
+                width: 100%;
+                height: 50px;
+                font-size: 15px;
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px solid #a1a5bd;
+                border-radius: 5px;
+                outline: none;
+                background-color: rgba(255, 255, 255, 0.5);
+                &.ng-invalid{
+                        &.ng-touched{
+                            border-color: red;
+                            ~  .fieldError{
+                                color: red;
+                                margin-bottom: 5px;
+                                display: inline-block;
+                            }
+                        }
+                }
+                &[type='checkbox']{
+                        width: 20px;
+                        height: 20px;
+                }
+        }
+        .fieldGroup{
+                margin-bottom: 12px;
+        }
+        .fieldError{
+                color: red;
+        }
+        .submit{
+                background-color: rgba(247, 160, 2, 0.5) !important;
+        }
+}
+svg{
+        font-size: 35px;
+}
+path {
+        fill: transparent;
+}
+
+text {
+        fill: #FF9800;
+}

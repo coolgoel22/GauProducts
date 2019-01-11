@@ -1,0 +1,27 @@
+<div class="login height_full">
+  <div class="loginCont">
+    <!-- <h2 class="login_title">आओ चले गौमाता के सानिध्य में ।</h2> -->
+    <app-page-title title="Please Login to continue"></app-page-title>
+    <form #loginForm="ngForm" (ngSubmit)="submit(loginForm)">
+      <div class="fieldGroup">
+        <input type="text" name="userName" placeholder="Enter user name" required
+            (ngModel)="newUser.userName" #userName="ngModel"/>
+        <div class="fieldError" *ngIf="userName.errors?.required">
+          This field is mandatory
+        </div>
+      </div>
+      <div class="fieldGroup">
+        <input type="password" name="password" placeholder="Enter Password" required
+          (ngModel)="newUser.password" minlength="8"
+          #password="ngModel"/>  
+        <div class="fieldError" *ngIf="password.errors?.required">
+          This field is mandatory
+        </div>
+        <div class="fieldError" *ngIf="password.errors?.minlength">
+          Please enter at least 8 alphabets
+        </div>
+      </div>
+      <input type="submit" class="submit btn btn_primary" value="Login" [disabled]="!loginForm.form.valid"/>
+    </form>
+  </div>
+</div>

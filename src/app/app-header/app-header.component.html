@@ -1,0 +1,22 @@
+<div class="appHeader">
+  <span class="appHeader_homeImg logo" (click)="onLogoClick()"></span>
+  <span class="title">गोधूली</span>
+  <span class="appHeader_menu fa fa-bars" (click)="toggleMenu()"></span>
+  <!-- <span class="appHeader_homeImg gauMata"></span> -->
+
+  <div class="gm-overlay" *ngIf="showFullLogo" (click)="onLogoClick()">
+    <div class="fullLogo_img">
+      <!-- <img src="/assets/images/logo.png" alt="गौधूलि Logo"> -->
+    </div>
+  </div>
+
+  <div class="gm-overlay" *ngIf="showMenu" (click)="toggleMenu()">
+    <ul class="menu">
+      <li class="menu_items" (click)="goto('home')"><i class="fa fa-home"></i> Home Page</li>
+      <li class="menu_items" (click)="goto('products')"><i class="fa fa-product-hunt"></i> Products</li>
+      <li class="menu_items" (click)="goto('images')"><i class="fa fa-image"></i> Images</li>
+      <li class="menu_items" (click)="goto('videos')"><i class="fa fa-video-camera"></i> Videos</li>
+      <li class="menu_items" (click)="goto('blogs')"><i class="fa fa-newspaper-o"></i> Blogs</li>
+    </ul>
+  </div>
+</div>

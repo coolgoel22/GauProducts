@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+}
+
+.gm-overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.comingSoon{
+    background-image: url(assets/images/coming-soon1.png);
+    background-position: center;
+    min-height: 250px;
+    background-repeat: no-repeat;
+}
+
+.height_full{
+    height: ~'calc(100vh - 56px)';
+    box-sizing: border-box;
+}
+
+.btn{
+    &_primary{
+        background-color: rgba(247, 160, 2);
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+        padding: 5px 20px;
+        outline: none;
+        font-weight: bold;
+    }
+    &:active{
+            opacity: 0.7;
+    }
+    &:disabled{
+            opacity: 0.5;
+    }
+}
