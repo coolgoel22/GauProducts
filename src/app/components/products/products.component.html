@@ -1,16 +1,21 @@
 <div class="products">
-     <div class="item">
-          <div class="item_img fa fa-images">
-               <img src="" alt="Img" id="src"/>
+     <div class="item" *ngFor="let product of products">
+          <div class="item_img">
+               <img src={{product.img}} alt="Img" id="src" *ngIf="product.img"/>
+               <img src="/assets/images/no-image.png" alt="No Image" *ngIf="!product.img">
           </div>
           <div class="item_des">
-               <h3 class="item_des_name">Item Name</h3>
-               <span class="item_des_brief">This is brief about the item</span>
+               <h3 class="item_des_name">{{product.name}} <span *ngIf="product.quantity"> ({{product.quantity}})</span></h3>
 
-               <span class="item_des_price">100 | Currency: INR</span>
+               <span class="item_des_brief" *ngIf="product.description">{{product.description}}</span>
+
+               <span class="item_des_price" *ngIf="product.amount">{{product.amount | currency: 'INR'}}</span>
+               
                <div class="item_des_actionBtns">
-                    <button class="btn btn_primary" (click)="onEnquiry()">Enquiry</button>
+                    <button class="btn btn_primary" (click)="buy(product)">Buy Now</button>
                </div>
           </div>
      </div>
 </div>
+
+<app-confirmation *ngIf="areUSure" [content]="content" (confirmation)=handleDiaRes($event)></app-confirmation>

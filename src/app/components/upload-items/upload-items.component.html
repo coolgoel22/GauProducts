@@ -1,0 +1,17 @@
+<div class="upload">
+  <div class="upload_prod">
+    <h3>Upload Product</h3>
+    <span>If same product is already uploaded than it will update the exisiting product</span>
+    <form>
+      
+      <select name="category" [(ngModel)]="item.category">
+        <option *ngFor="let product of products;" value="{{product.id + '_$_' + product.name}}" > {{product.name}}</option>
+      </select>
+      <input type="file" name="productImg" (change)="onImageChange($event)">
+      <input type="number" name="productAmount" [(ngModel)]="item.amount">
+      <input type="number" name="productDis" [(ngModel)]="item.dis">
+      <input type="text" name="productDes" [(ngModel)]="item.description">
+      <input type="submit" class="btn btn_primary" (click)="uploadProduct(item)"/>
+    </form>
+  </div>
+</div>

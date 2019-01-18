@@ -22,15 +22,17 @@ import { VideosComponent } from './components/videos/videos.component';
 import { ProductsComponent } from './components/products/products.component';
 
 // Services
-import { DataControllerService } from './services/data-controller.service';
 import { AuthService } from './services/auth.service';
-
+import { ProductService } from './services/product.service';
 
 // Firebase
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { UploadItemsComponent } from './components/upload-items/upload-items.component';
+import { AngularFireStorageModule } from 'angularfire2/storage';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     ImagesComponent,
     VideosComponent,
     ProductsComponent,
+    ConfirmationComponent,
+    UploadItemsComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,11 +55,12 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireStorageModule
   ],
   providers: [
-    DataControllerService,
-    AuthService
+    AuthService,
+    ProductService
   ],
   exports: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { DataControllerService } from '../services/data-controller.service';
 
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
@@ -13,6 +12,7 @@ import { AuthService } from '../services/auth.service';
 export class LoginComponent implements OnInit {
   public userName: string;
   public password: string;
+  public error: string;
   public newUser = {
     userName: '',
     password: ''
@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
   @ViewChild('loginForm') form:any;
 
   constructor(
-    public data:DataControllerService,
     public authService: AuthService,
     public router:Router) { }
 
@@ -29,14 +28,15 @@ export class LoginComponent implements OnInit {
   submit({value, valid}:{value:any, valid:boolean}){
     if(valid){
       this.authService.login(value.userName, value.password).then(result=>{
-        if(result)
+        if(result){
+          console.log("user logged in successfully");
+          this.router.navigate(['home']);
+        }
       }, err=>{
-        debugger;
+        this.error = err.message;
       });
-
-      // this.router.navigate(['home']);
     }else{
-      console.log("Form is not valid");
+      this.error = 'Please fill valid login and password fields';
     }
   }
   

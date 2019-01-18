@@ -1,8 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+*{
     margin: 0;
 }
 
+html, body{
+    user-select: none;
+}
 .gm-overlay{
     position: fixed;
     top: 0;
@@ -35,14 +38,20 @@ ul{
 }
 
 .btn{
+    display: inline-block;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 20px;
+    outline: none;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px #aaa;
+    text-shadow: 1px 1px 2px #666;
     &_primary{
         background-color: rgba(247, 160, 2);
-        border: none;
-        color: #fff;
-        border-radius: 5px;
-        padding: 5px 20px;
-        outline: none;
-        font-weight: bold;
+        margin-right: 10px;
+    }&_secondary{
+        background-color: #666;
     }
     &:active{
             opacity: 0.7;

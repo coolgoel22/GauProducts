@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
 
-import { GavySidhRecords } from '../model/gavySidh.interface';
-import { UserPermissions } from '../model/permissions.interface';
-
-import { DataControllerService } from '../services/data-controller.service';
-import { Constants } from '../app-constants';
-import { Container } from '@angular/compiler/src/i18n/i18n_ast';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +11,6 @@ import { Container } from '@angular/compiler/src/i18n/i18n_ast';
 export class HomeComponent implements OnInit {
 
   constructor(
-    private data: DataControllerService, 
     private router: Router) { }
   
   ngOnInit() {

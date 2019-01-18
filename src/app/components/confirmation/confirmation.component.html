@@ -1,0 +1,14 @@
+<div class="confirmation">
+  <div class="confirmation_dia">
+    <div class="confirmation_heading">
+      {{content.heading}}
+    </div>
+    <div class="confirmation_content">
+      {{content.text}}
+    </div>
+    <div class="btn_cont">
+      <button class="btn btn_primary" (click)="confirm(true)">Yes</button>
+      <button class="btn btn_secondary" (click)="confirm(false)">Cancel</button>
+    </div>
+  </div>
+</div>

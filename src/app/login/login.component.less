@@ -8,12 +8,17 @@
         &_title{
 
         }
+        .loginError{
+                border: 1px solid red;
+                border-radius: 5px;
+                padding: 15px;
+        }
         &Cont{
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 75%;
+                width: 90%;
         }
         .fieldError{
                 display: none;
@@ -47,8 +52,15 @@
         .fieldGroup{
                 margin-bottom: 12px;
         }
-        .fieldError{
+        .fieldError, .error{
                 color: red;
+        }
+        .error{
+                margin-bottom: 10px;
+                background-color: rgba(0,0,0,0.5);
+                padding: 3px 5px;
+                border-radius: 5px;
+                font-size: 14px;
         }
         .submit{
                 background-color: rgba(247, 160, 2, 0.5) !important;

@@ -6,6 +6,7 @@ import { BlogsComponent } from './components/blogs/blogs.component';
 import { ImagesComponent } from './components/images/images.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { ProductsComponent } from './components/products/products.component';
+import { UploadItemsComponent } from './components/upload-items/upload-items.component';
 
 const routes: Routes = [
     { path: '',   component: LoginComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
     { path: 'images',   component: ImagesComponent},
     { path: 'videos',   component: VideosComponent},
     { path: 'products',   component: ProductsComponent},
+    { path: 'upload', component: UploadItemsComponent},
     { path: '**', component: LoginComponent }
 ];
 

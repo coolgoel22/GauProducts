@@ -5,7 +5,12 @@
 export const environment = {
   production: true,
   firebase: {
-    
+    apiKey: "AIzaSyBCHnl5wJgZYjt01I1F5EX5Z7o-tjJJ2Wc",
+    authDomain: "godhuli-be742.firebaseapp.com",
+    databaseURL: "https://godhuli-be742.firebaseio.com",
+    projectId: "godhuli-be742",
+    storageBucket: "godhuli-be742.appspot.com",
+    messagingSenderId: "400312029987"
   }
 };
 /*
